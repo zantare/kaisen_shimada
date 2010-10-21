@@ -6,4 +6,6 @@ class Product < ActiveRecord::Base
 
   scope :for_sale, :order => "created_at DESC"
   scope :name_like, lambda {|q| {:conditions => ['name like ?', "%#{q}%"]}}
+
+  scope :recent, lambda {|num| {:limit => num, :order => "created_at DESC" }}
 end
