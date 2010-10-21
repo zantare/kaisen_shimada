@@ -1,5 +1,7 @@
 %h1 Listing products
 
+%p=print_name
+
 %table
   %tr
     %th Name
@@ -14,7 +16,7 @@
     %tr
       %td= product.name
       %td= product.description
-      %td= product.image_url
+      %td= image_tag(product.image_url)
       %td= product.price
       %td= link_to 'Show', product
       %td= link_to 'Edit', edit_product_path(product)

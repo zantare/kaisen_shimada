@@ -1,0 +1,15 @@
+%h1 買鮮カタログ
+
+- @products.each do |product|
+  %div.product
+    = image_tag(product.image_url, :class => "photo")
+    %p.name
+      = product.name
+    %p.description
+      = simple_format(product.description)
+    %div.price_line
+      %span.price
+        = product.price
+        円
+  %br  
+
