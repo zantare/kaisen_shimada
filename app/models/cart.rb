@@ -1,14 +1,16 @@
 class Cart
   def add_product(product)
-    item_ids << product.id
+    quantities_by_item_id[product.id] += 1
   end 
 
-  def items
-    item_ids.map{|id| Product.find(id)}
+  def items_with_quantity
+    quantities_by_item_id.map do |product_id, quantity|
+      [Product.find(product_id), quantity]
+    end
   end
 
   private
-  def item_ids
-    @item_ids ||= []
+  def quantities_by_item_id
+    @quantities_by_item_id ||= Hash.new(0)
   end
 end
