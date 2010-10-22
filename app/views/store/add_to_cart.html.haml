@@ -5,9 +5,9 @@
 %p= @product.name
 
 %ul
-  - @cart.items_with_quantity.each do |item, quantity|
+  - @cart.items.each do |item|
     %li
       = item.name
       &times;
-      = quantity
+      = item.quantity
 
