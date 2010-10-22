@@ -30,10 +30,13 @@ body {
     margin-right: 10px;
     float: left; }
   #store .product .price_line {
-    text-aligh: right; }
+    text-align: right; }
   #store .product .price {
     font-weight: 700;
     font-size: 130%; }
+#store .product .button_to {
+  text-align: right;
+}
 
 #footer {
   font-size: 90%;
