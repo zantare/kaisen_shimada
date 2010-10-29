@@ -9,7 +9,9 @@
       %span.price
         = product.price
         円
-    = button_to "買い物カゴに入れる", :action => 'add_to_cart', :id => product
+    = form_tag({ :action => "add_to_cart", :id => product }, :remote => true, :class => "order") do
+      = submit_tag '買い物カゴに入れる'
+
 = will_paginate @products
 %br  
 

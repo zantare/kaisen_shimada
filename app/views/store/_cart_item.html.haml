@@ -7,4 +7,7 @@
     = number_with_delimiter(cart_item.price)
     円
   %td
-    = button_to "キャンセル", :action => "remove_item_from_cart", :id => cart_item.product_id
+    = form_tag({ :action => "remove_item_from_cart",:id => cart_item.product_id }, :remote => true) do
+      = submit_tag 'キャンセル'
+
+

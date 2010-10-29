@@ -9,5 +9,7 @@
       = number_with_delimiter(cart.total_price)
       円
 
-= button_to "買い物カゴを空にする", :action => "empty_cart"
+= form_tag({ :action => "empty_cart" }, :remote => true) do
+  = submit_tag '買い物カゴを空にする'
+
 
