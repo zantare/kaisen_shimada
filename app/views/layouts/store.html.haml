@@ -12,7 +12,9 @@
       %h1 買鮮カタログ
     .clear
     #columns
-      #side.grid_3
+      #side.grid_4
+        #cart
+          = render :partial => 'cart', :object => @cart
         %ul#nav
           %li
             = link_to "トップ", store_path
@@ -22,7 +24,7 @@
             %a{:href => "#"}お問い合わせ
           %li
             %a{:href => "#"}ご利用ガイド
-      #main.grid_7.suffix_2
+      #main.grid_5.suffix_3
         - if flash[:notice]
           #notice= flash[:notice]
         != yield

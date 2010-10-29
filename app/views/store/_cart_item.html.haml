@@ -1,0 +1,10 @@
+%tr
+  %td
+    = cart_item.name
+    &times;
+    = cart_item.quantity
+  %td.item-price
+    = number_with_delimiter(cart_item.price)
+    円
+  %td
+    = button_to "キャンセル", :action => "remove_item_from_cart", :id => cart_item.product_id

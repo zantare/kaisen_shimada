@@ -1,0 +1,57 @@
+* {
+  font-family: "ヒラギノ角ゴ Pro W3","メイリオ",Osaka,sans-serif;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #4C4645;
+}
+
+#header {
+  padding-top: 10px;
+  height: 50px;
+}
+
+#side {
+  background-color: #f4f4ef;
+  #nav {
+    list-style: none outside none;
+    padding-top: 10px;
+  }
+}
+
+
+#store .product {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  .name {
+    font-size: 130%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .photo {
+    width: 75px;
+    border: 1px solid #CCCCCC;
+    margin-right: 10px;
+    float: left;
+  }
+
+  .price_line {
+    text-aligh: right;
+  }
+
+  .price {
+    font-weight: 700;
+    font-size: 130%;
+  }
+}
+
+#footer {
+  font-size: 90%;
+  text-align: center;
+  padding-top: 10px;
+}
+

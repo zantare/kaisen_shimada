@@ -14,6 +14,10 @@ class CartItem
     product.name
   end
 
+  def price
+    product.price * quantity
+  end
+
   private
   def product
     Product.find(@product_id)
