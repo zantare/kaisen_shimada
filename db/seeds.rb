@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+Product.all.each do |product|
+  product.update_attribute(:shop_id, Shop.all.shuffle.first.id)
+end

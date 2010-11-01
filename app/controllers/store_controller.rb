@@ -5,6 +5,10 @@ class StoreController < ApplicationController
     @products = Product.for_sale.paginate :page => params[:page], :per_page => 3
   end
 
+  def suppliers
+    @suppliers = Shop.all
+  end
+
   def add_to_cart
     @product = Product.find(params[:id])
     @cart.add_product(@product)

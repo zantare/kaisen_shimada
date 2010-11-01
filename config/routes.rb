@@ -1,5 +1,8 @@
 KaisenShimada::Application.routes.draw do
+  resources :shops
+
   get "store/index"
+  get "store/suppliers"
   get "store" => "store#index", :as => :store
   post "store/add_to_cart/:id" => "store#add_to_cart"
   post "store/empty_cart" => "store#empty_cart"

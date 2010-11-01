@@ -3,6 +3,8 @@
     = image_tag(product.image_url, :class => "photo")
     %p.name
       = product.name
+    %p.shop
+      = product.shop.name
     %p.description
       = simple_format(product.description)
     %div.price_line

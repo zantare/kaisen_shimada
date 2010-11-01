@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @shop.name
+%p
+  %b Description:
+  = @shop.description
+%p
+  %b Image url:
+  = @shop.image_url
+%p
+  %b Lines summary:
+  = @shop.lines_summary
+
+= link_to 'Edit', edit_shop_path(@shop)
+\|
+= link_to 'Back', shops_path
